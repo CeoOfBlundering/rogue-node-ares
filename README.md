@@ -1,1 +1,65 @@
-# ROGUE NODE: ARES Hunter-Killer Repurposing Protocol 
+# ROGUE NODE: ARES Hunter-Killer Repurposing Protocol 🤖⚡
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Target: STM32G071](https://img.shields.io/badge/Target-STM32G071RBT6-blue.svg)](https://www.st.com)
+[![Language: Bare--Metal_C](https://img.shields.io/badge/Language-Bare--Metal_C-green.svg)]()
+
+A bare-metal C embedded firmware campaign developed for the **STM32G071RBT6** ARM Cortex-M0+ microcontroller.
+
+---
+
+## 🌌 Lore & Mission Context
+In **2091**, humanity survives in subterranean vaults beneath urban ruins patrolled by autonomous **ARES** (Autonomous Reconnaissance & Enforcement Network) military hunter-killer swarms. 
+
+As a **Scav-Technician**, your survival depends on recovering downed HK units, tapping their bare-metal microcontroller registers, and rewriting their firmware to convert lethal military drones into loyal perimeter sentries, sonar scouts, and hazard diagnostic stations.
+
+---
+
+## 🛠️ Hardware Inventory & Toolchain
+
+### Processing & Control
+* **MCU:** STM32G071RBT6 (ARM Cortex-M0+, 64 MHz, 128 KB Flash, 36 KB SRAM)
+* **Programmer/Debugger:** ST-Link V2 Mini / On-board ST-LINK
+
+### Drivers & Peripheral Component Stack
+* **Displays:** 0.96" SPI OLED (SSD1306 / SH1106)
+* **Logic Expansion:** 2x 74HC595 8-Bit Shift Registers (Daisy-Chained 16-LED Array)
+* **Power & Analog:** 2N2222 NPN Transistors, 1N4007 Flyback Diodes, 10k Potentiometer
+* **Acoustics & Input:** Passive Buzzers (3V–7V), 4-Pin Pushbuttons
+* **Passive Discretes:** Resistor Assortment (220Ω to 100kΩ), Ceramic & Electrolytic Capacitors
+
+### Diagnostic Instrumentation
+* **Logic Analyzer:** 24MHz 8-Channel USB Logic Analyzer (Pulse / SPI Sniffing)
+* **Multimeter:** Digital Multimeter (Voltage drop & current bus verification)
+
+---
+
+## 📜 Mission Campaign Architecture
+
+| Mission | ARES Subsystem | Bare-Metal C Concept | Deliverable |
+| :--- | :--- | :--- | :--- |
+| **01** | Acoustic Malfunction Siren | GPIO Alternate Functions, Timer PWM (`TIM1_CH1`), Transistor Driver | `driver_buzzer_pwm.c` |
+| **02** | Target Distance Sonar | ADC1 Sampling, Dynamic Timer Prescaler/ARR Pitch Synthesis | `driver_sonar_adc.c` |
+| **03** | Threat Proximity Indicator | SPI / Bit-Banged Serial Data Output, 16-Bit Daisy-Chain | `driver_74hc595_bar.c` |
+| **04** | Tactical Stealth Dimmer | Timer PWM Output Enable (`OE`), Multi-Byte LED Matrixing | `driver_led_matrix.c` |
+| **05** | Diagnostic HUD Terminal | Hardware SPI1 Register Control, Memory Framebuffer Engine | `driver_oled_spi.c` |
+| **06** | Signal Integrity Audit | Logic Analyzer Bus Capture, SPI CPOL/CPHA Timing Verification | `trace_spi_audit.sal` |
+| **07** | Manual Sentry Keypad | GPIO Input Debouncing, External Interrupts (EXTI), State Machine | `fsm_sentry_lock.c` |
+| **08** | Emergency EMP Safeguard | EXTI Priority Levels, Low-Power Standby / Clock Scaling | `sys_power_safeguard.c` |
+
+---
+
+## 📂 Repository Layout
+
+```text
+rogue-node-ares/
+├── LICENSE                     # MIT Open Source License
+├── README.md                   # System Architecture & Campaign Map
+├── docs/                       # Wiring diagrams & Logic Analyzer captures
+│   ├── schematics/
+│   └── logic_analyzer/
+├── firmware/                   # STM32 Bare-Metal Source Code
+│   ├── include/                # Register header definitions
+│   ├── src/                    # Peripheral drivers
+│   └── missions/               # Mission-specific execution modules
+└── media/                      # Circuit breadboard photos & visual logs
