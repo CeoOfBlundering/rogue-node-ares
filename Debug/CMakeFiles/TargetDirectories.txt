@@ -1,0 +1,3 @@
+C:/Users/Pars/Desktop/Programming/Projects/Embedded/rogue-node-ares/Debug/CMakeFiles/rogue.dir
+C:/Users/Pars/Desktop/Programming/Projects/Embedded/rogue-node-ares/Debug/CMakeFiles/edit_cache.dir
+C:/Users/Pars/Desktop/Programming/Projects/Embedded/rogue-node-ares/Debug/CMakeFiles/rebuild_cache.dir

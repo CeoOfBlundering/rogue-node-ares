@@ -1,0 +1,13 @@
+# ninja log v7
+6	311	8088689203274908	CMakeFiles/rogue.dir/Startup/startup_stm32g071rbtx.s.obj	1fd9a721764788e4
+43	369	8088689203644951	CMakeFiles/rogue.dir/Sources/sysmem.c.obj	e23ac546d6fd4f68
+36	449	8088689203564940	CMakeFiles/rogue.dir/Sources/syscalls.c.obj	87ae77031f1e0ede
+6	298	8088690645632667	CMakeFiles/rogue.dir/Sources/main.c.obj	6d005297dec103d8
+311	687	8088658870825825	rogue.elf	6fcd5a18e492adca
+5	19	8088689159627153	clean	9abd1d64dcd3f6ca
+6	143	8088693007802942	build.ninja	250737d9e2e7483c
+6	143	8088693007802942	C:/Users/Pars/Desktop/Programming/Projects/Embedded/rogue-node-ares/Debug/cmake_install.cmake	250737d9e2e7483c
+3	274	8088695376978174	CMakeFiles/rogue.dir/Sources/m01-driver_buzzer_pmw.c.obj	debb3115da049d13
+275	495	8088695379688715	rogue.elf	92320e299be94413
+3	273	8088696099070422	CMakeFiles/rogue.dir/Sources/m01-driver_buzzer_pmw.c.obj	debb3115da049d13
+274	482	8088696101778268	rogue.elf	92320e299be94413
