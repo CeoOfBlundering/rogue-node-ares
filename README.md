@@ -52,20 +52,3 @@ As a **Scav-Technician**, your survival depends on recovering downed HK units, t
 | **06** | Signal Integrity Audit | Logic Analyzer Bus Capture, SPI CPOL/CPHA Timing Verification | `trace_spi_audit.sal` |
 | **07** | Manual Sentry Keypad | GPIO Input Debouncing, External Interrupts (EXTI), State Machine | `fsm_sentry_lock.c` |
 | **08** | Emergency EMP Safeguard | EXTI Priority Levels, Low-Power Standby / Clock Scaling | `sys_power_safeguard.c` |
-
----
-
-## 📂 Repository Layout
-
-```text
-rogue-node-ares/
-├── LICENSE                     # MIT Open Source License
-├── README.md                   # System Architecture & Campaign Map
-├── docs/                       # Wiring diagrams & Logic Analyzer captures
-│   ├── schematics/
-│   └── logic_analyzer/
-├── firmware/                   # STM32 Bare-Metal Source Code
-│   ├── include/                # Register header definitions
-│   ├── src/                    # Peripheral drivers
-│   └── missions/               # Mission-specific execution modules
-└── media/                      # Circuit breadboard photos & visual logs
